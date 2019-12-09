@@ -3,7 +3,7 @@ import Operation from './operation.js';
 
 describe('测试Operation对象', function () {
   describe('测试toFixed方法', function () {
-    const operation = new Operation()
+    const operation = new Operation(1,3)
     it('3===>3.0000', function () {
       const a = operation.toFixed(3, 4)
       assert.equal(a, '3.0000')
