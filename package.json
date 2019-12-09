@@ -1,0 +1,28 @@
+{
+  "name": "utils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "formVerify.js",
+  "scripts": {
+    "test": "mocha --require @babel/register --recursive ./src/lib/operation/operation.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smallmonsters/utils.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/smallmonsters/utils/issues"
+  },
+  "homepage": "https://github.com/smallmonsters/utils#readme",
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/node": "^7.6.3",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/register": "^7.6.2",
+    "mocha": "^6.2.2"
+  },
+  "dependencies": {}
+}

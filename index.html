@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./ramda.js"></script>
+</head>
+<style>
+  .p {
+    background: #0385f0;
+  }
+
+  p {
+    /* background-image: linear-gradient(#004a86, #008cff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    font-size: 16px;
+    font-weight: 600;
+    color: #0385f0;
+    -webkit-text-stroke: 0.3px #fff;
+    -moz-text-stroke: 0.3px #fff;
+    text-shadow: -2px 2px 5px rgba(0, 0, 0, 1);
+    -webkit-text-shadow: -2px 2px 5px rgba(0, 0, 0, 1);
+    -moz-text-shadow: -2px 2px 5px rgba(0, 0, 0, 1);
+    text-align: center;
+  }
+
+  .span {
+    background: rgb(228, 222, 211);
+    text-align: center;
+  }
+
+  span {
+    background: linear-gradient(red, blue);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: #63371F;
+    font-size: 16px;
+    font-weight: 600;
+    -webkit-text-stroke: 0.3px #fff;
+    -moz-text-stroke: 0.3px #fff;
+    text-shadow: -2px 2px 5px rgba(0, 0, 0, 1);
+    -webkit-text-shadow: -2px 2px 5px rgba(0, 0, 0, 1);
+    -moz-text-shadow: -2px 2px 5px rgba(0, 0, 0, 1);
+  }
+
+  .pp {
+    font-size: 100px;
+    font-weight: 700;
+    font-family: "Microsoft Yahei";
+    text-shadow: 5px 5px 6px orange;
+    /* 水平位移  垂直位移 模糊度 颜色 */
+    text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+    /* (文字凸起效果)可以通过","添加多个阴影 */
+    text-shadow: -1px -1px 1px #000, 1px 1px 1px #fff;
+    /* (文字凹陷效果) */
+    color: #ccc;
+    /* 字体颜色放在text-shadow下面才生效 */
+  }
+</style>
+
+<body>
+  <div class="p">
+    <p>农财种植匠管控平台</p>
+  </div>
+  <div class="span">
+    <span>农财种植匠管控平台</span>
+  </div>
+  <p class="pp">苍茫的天涯我的爱！</p>
+</body>
+<script src="./src/xhr/xhr.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+  const classyGreeting = (firstName, lastName) => "The name's " + lastName + ", " + firstName + " " + lastName
+  const yellGreeting = R.compose(R.toUpper, classyGreeting);
+  yellGreeting('James', 'Bond'); //=> "THE NAME'S BOND, JAMES BOND"
+  a = R.compose(Math.abs, R.add(1), R.multiply(2))(-4) //=> 7
+  console.log(a)
+</script>
+<script>
+  // https://btlotus.batian.com.cn/agriculture-circle/question/app/list?sessionId=&pageSize=10&pageNum=1&type=1&key=
+  let req = {
+    method: "get",
+    url: "http://192.168.1.213:8080/plant_web/web/front/index.shtml",
+    // sessionId: "",
+    // pageSize:   10,
+    // pageNum: 1,
+    // type: 1,
+    // key: ""
+  }
+  requier(req, function (res) {
+    console.log(res)
+  })
+  $.ajax({
+    url: "http://192.168.1.213:8080/plant_web/web/front/index.shtml",
+    method: "get",
+    success(res) {
+      console.log(res)
+    }
+  })
+</script>
+
+</html>
