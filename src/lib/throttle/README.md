@@ -6,7 +6,7 @@
 
 ``` JavaScript
 // callbak 回调函数，delay 时间间隔
-let limitfn = new LimitFn(callbak, delay).throttleFn()
+let limitfn = new LimitFn(callbak, delay)
 // 生成一个节流函数
 let throttle = limitfn.throttleFn()
 // 生成一个防抖函数
